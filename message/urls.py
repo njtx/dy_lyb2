@@ -3,5 +3,5 @@ from . import views
 
 app_name = 'message'
 urlpatterns = {
-    url(r'^message/$', views.getmsg, name='message')
+    url(r'^message/$', views.getmsg, name='msg')
 }

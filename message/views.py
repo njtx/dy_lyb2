@@ -15,7 +15,7 @@ def getmsg(request):
     #新增
 
     TITLE = '欢迎留言...'
-    if request.method == 'post':
+    if request.method == 'POST':
         # 获取value值，取不到为空
 
         name = request.POST.get('name', '')
@@ -29,7 +29,7 @@ def getmsg(request):
         user_message.address = address
         user_message.messages = message
         user_message.save()
-    
+
     return render(request, 'message/message_form.html', context={
         'title': TITLE
     })

@@ -8,3 +8,8 @@ class msg(models.Model):
 
     class Meta:
         verbose_name = u'用户留言信息'
+
+    def __str__(self):
+        # return self.name
+        #查询显示的字段
+        return "%s,%s,%s,%s" % (self.name, self.email, self.address, self.messages)
